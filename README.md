@@ -1,15 +1,36 @@
-# kafka-crash-course
+# Kafka Producer-Consumer Demo
 
-### Install confluent-kafka dependency
-`pip3 install confluent-kafka`
+## 📌 Overview
+This project demonstrates a distributed event streaming system using Apache Kafka. It implements Python-based producers and consumers to send and receive real-time messages, simulating an order processing workflow.
 
-### Validate that the topic was created in kafka container
-`docker exec -it kafka kafka-topics --list --bootstrap-server localhost:9092`
+---
 
-### Describe that topic and see its partitions
-`docker exec -it kafka kafka-topics --bootstrap-server localhost:9092 --describe --topic new_orders`
+## 🛠️ Tech Stack
+- Python
+- Apache Kafka
+- Docker & Docker Compose
+- confluent-kafka (Python client)
 
-#### View all events in a topic
-`docker exec -it kafka kafka-console-consumer --bootstrap-server localhost:9092 --topic orders --from-beginning`
+---
 
+## ⚙️ Architecture
+The system follows an event-driven architecture:
 
+Producer → Kafka Topic (`orders`) → Consumer
+
+- Producer sends order events (JSON messages)
+- Kafka broker handles message streaming
+- Consumer subscribes and processes messages in real time
+
+---
+
+## 🚀 Features
+- Real-time event streaming using Kafka
+- Python-based Producer and Consumer implementation
+- JSON-based message handling (order events)
+- Dockerized Kafka setup (easy to run locally)
+- Partition-based message delivery
+
+---
+
+## 📂 Project Structure
