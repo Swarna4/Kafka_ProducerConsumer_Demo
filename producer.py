@@ -18,9 +18,9 @@ def delivery_report(err, msg):
 
 order = {
     "order_id": str(uuid.uuid4()),
-    "user": "lara",
-    "item": "frozen yogurt",
-    "quantity": 10
+    "user": "swarna",
+    "item": "ice-cream",
+    "quantity": 4
 }
 
 value = json.dumps(order).encode("utf-8")
